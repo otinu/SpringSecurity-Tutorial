@@ -14,6 +14,8 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
+
+	//configure(HttpSecurity http)によって、どのURLは認証をして、どのURLは認証をしないのかを設定する
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 			.authorizeRequests()
