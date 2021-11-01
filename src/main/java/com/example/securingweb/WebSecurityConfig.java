@@ -34,6 +34,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	public UserDetailsService userDetailsService() {
 		UserDetails user =
+				// DBでの登録などはせずに、ここでログインをするユーザー情報を設定
 			 User.withDefaultPasswordEncoder()
 				.username("user")
 				.password("password")
